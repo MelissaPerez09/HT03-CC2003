@@ -24,7 +24,10 @@ public class Gnome extends Sort {
                 index--;
             }
         }
+        mensaje("\n A continuacion se mostraran los numeros ordenados por Gnome Sort: \n");
+        printArray(datos);
         return;
+
     }
     
 }
