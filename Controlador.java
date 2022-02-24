@@ -1,4 +1,5 @@
 import Sorts.Gnome;
+import Sorts.Quick;
 
 /**
  * Universidad del Valle de Guatemala
@@ -12,10 +13,11 @@ import Sorts.Gnome;
 
 public class Controlador{
     public static void main(String[] args) {
-        Gnome estesort = new Gnome();
+        Gnome gnomesort = new Gnome();
+        Quick quicksort= new Quick();
         int[] numbers = {10,24,30,87,2,3};
 
-        estesort.gnomeSort( numbers,  6 );
-        
+        gnomesort.gnomeSort( numbers,  6 );
+        quicksort.quicksort(numbers, 0, 5 );
     }
 }

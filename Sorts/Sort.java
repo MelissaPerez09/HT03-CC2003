@@ -19,8 +19,12 @@ public class Sort implements IComparator <Integer>{
 
     public void printArray(int[] array){
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("%d", array[i]);
+            System.out.printf("%d ", array[i]);
         }
         System.out.println("\n");
+    }
+
+    public void mensaje(String mensaje){
+        System.out.println(mensaje);
     }
 }
