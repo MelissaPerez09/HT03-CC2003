@@ -25,7 +25,7 @@ replay_pid*
 
 # Extras
 /.idea
-/AED-Hoja-de-trabajo-1.iml
+*.iml
 /out
 *.DS_Store
 *.dia.autosave
