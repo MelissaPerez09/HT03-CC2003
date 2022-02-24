@@ -11,6 +11,11 @@ package Sorts;
 
 public class Selection extends Sort{
 
+    /**
+     * Método principal para ordenar un array por medio de Selection Sort
+     * @param datos Array de los datos a ordenar
+     * @param size Tamaño del array a ordenar
+     */
     public void selectionSort(int datos[], int size){
         int sinOrdenar = size;
         int max;
