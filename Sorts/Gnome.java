@@ -1,5 +1,5 @@
 package Sorts;
 
-public class Gnome implements IComparator{
+public class Gnome extends Sort {
     
 }
