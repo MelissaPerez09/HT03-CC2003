@@ -1,7 +1,23 @@
 package Sorts;
+/**
+ * Universidad del Valle de Guatemala
+ * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @version 25/02/2022
+ * Algoritmos y estructuras de Datos HDT3
+ *
+ * Sort.java
+ * Clase sort que implementa la interfaz IComparator, para ser usada por los distintos algoritmos
+ */
+
 
 public class Sort implements IComparator <Integer>{
-   
+
+    /**
+     * Método para comparar dos valores enteros
+      * @param x Primer valor a comparar
+     * @param y Segundo valor a comparar
+     * @return Regresa 0 si el primer valor es mayor, 1 si es menor, -1 si son iguales
+     */
     @Override
     public int Compare(Integer x, Integer y ){
 
@@ -17,6 +33,10 @@ public class Sort implements IComparator <Integer>{
         return res;
     }
 
+    /**
+     * Método para imprimir un array
+     * @param array Array a imprimir
+     */
     public void printArray(int[] array){
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%d ", array[i]);
@@ -24,6 +44,10 @@ public class Sort implements IComparator <Integer>{
         System.out.println("\n");
     }
 
+    /**
+     * Método para imprimir un mensaje en pantalla
+     * @param mensaje Mensaje a imprimir
+     */
     public void mensaje(String mensaje){
         System.out.println(mensaje);
     }
