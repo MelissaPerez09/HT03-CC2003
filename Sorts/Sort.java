@@ -16,4 +16,11 @@ public class Sort implements IComparator <Integer>{
         }
         return res;
     }
+
+    public void printArray(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf("%d", array[i]);
+        }
+        System.out.println("\n");
+    }
 }
