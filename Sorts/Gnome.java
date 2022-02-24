@@ -1,11 +1,20 @@
 package Sorts;
+/**
+ * Universidad del Valle de Guatemala
+ * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @version 25/02/2022
+ * Algoritmos y estructuras de Datos HDT3
+ *
+ * Selection.java
+ * Clase Gnome que ordena un array de enteros con el algoritmo Gnome Sort
+ */
 
 public class Gnome extends Sort {
 
     /**
-     * 
-     * @param datos
-     * @param size
+     * Método principal para ordenar un array por medio de Gnome Sort
+     * @param datos Array de los datos a ordenar
+     * @param size Tamaño del array a ordenar
      */
     public void gnomeSort(int datos[], int size)
     {
