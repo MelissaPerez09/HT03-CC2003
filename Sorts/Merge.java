@@ -53,7 +53,7 @@ public class Merge extends Sort{
     }
   }
 
-  public static void sort (int datos[], int izquierda, int derecha){
+  void sort (int datos[], int izquierda, int derecha){
     if (izquierda < derecha){
       int medio = izquierda + (derecha - 1) / 2;
 
@@ -62,5 +62,11 @@ public class Merge extends Sort{
 
       merge(datos, izquierda, medio, derecha);
     }
+  }
+
+  public void mergesort(int datos[], int izquierda, int medio, int derecha){
+    merge(datos, izquierda, medio, derecha);
+    mensaje("\n A continuation se mostraran los números ordenados por MergeSort:");
+    printArray(datos);
   }
 }
