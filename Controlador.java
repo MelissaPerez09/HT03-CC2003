@@ -1,6 +1,7 @@
 import Sorts.Gnome;
 import Sorts.Merge;
 import Sorts.Quick;
+import Sorts.Radix;
 import Sorts.Selection;
 
 /**
@@ -21,10 +22,12 @@ public class Controlador{
         Quick quicksort= new Quick();
         Selection selectionsort = new Selection();
         Merge mergesort = new Merge();
+        Radix radixsort = new Radix();
 
         gnomesort.gnomeSort( numbers,  7 );
         quicksort.quicksort(numbers, 0, 6 );
         selectionsort.selectionSort(numbers, numbers.length);
         mergesort.mergesort(numbers, 0, 6, numbers.length -1);
+        radixsort.radixsort(numbers, 7);
     }
 }
