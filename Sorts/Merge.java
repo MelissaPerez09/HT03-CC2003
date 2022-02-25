@@ -66,7 +66,7 @@ public class Merge extends Sort{
 
   public void mergesort(int datos[], int izquierda, int medio, int derecha){
     merge(datos, izquierda, medio, derecha);
-    mensaje("\n A continuation se mostraran los números ordenados por MergeSort:");
+    mensaje("\n A continuation se mostraran los numeros ordenados por MergeSort:");
     printArray(datos);
   }
 }

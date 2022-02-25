@@ -65,7 +65,7 @@ public class Quick extends Sort{
      */
     public void quicksort(int datos[], int izquierda, int derecha){
         sort(datos, izquierda, derecha);
-        mensaje("\n A continuation se mostraran los números ordenados por Quick Sort:");
+        mensaje("\n A continuation se mostraran los numeros ordenados por Quick Sort:");
         printArray(datos);
     }
     
