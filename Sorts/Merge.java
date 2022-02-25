@@ -67,6 +67,11 @@ public class Merge extends Sort{
     }
   }
 
+  /**
+   * Metodo para utilizar el compare de la clase sort
+   * @param b
+   * @return
+   */
   private int Compare(boolean b) {
     return 0;
   }
@@ -78,7 +83,7 @@ public class Merge extends Sort{
    * @param derecha Dato de la posicion derecha
    */
   void sort (int datos[], int izquierda, int derecha){
-    if (izquierda < derecha){
+    if (Compare(izquierda < derecha) == 0){
       //encuentra la parte media del arreglo
       int medio = izquierda + (derecha - 1) / 2;
 

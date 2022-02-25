@@ -15,7 +15,7 @@ public class Radix extends Sort{
     /**
      * Permite encontrar el maximo dato en el array
      * @param datos Array de data a ordenar
-     * @param size  Tamaño del array a ordenar
+     * @param size  Tamano del array a ordenar
      * @return
      * 
      */
@@ -30,11 +30,11 @@ public class Radix extends Sort{
     /**
      * 
      * @param datos Array de data a ordenar
-     * @param n     tamaño del array
+     * @param n     tamano del array
      * @param exp   es 10^i  donde i es exp
      */
     public void countSort(int datos[], int n, int exp){
-        int output[] = new int[n]; // array con el tamaño del array original
+        int output[] = new int[n]; // array con el tamano del array original
         int i;
         int count[] = new int[10];
         Arrays.fill(count, 0);      //Rellenando de 0s el array
@@ -59,7 +59,7 @@ public class Radix extends Sort{
     }
 
     /**
-     * funcion p, ordena los datos de tamaño n con Radix Sort
+     * funcion p, ordena los datos de tamano n con Radix Sort
      * @param datos
      * @param n
      */
@@ -75,7 +75,4 @@ public class Radix extends Sort{
         mensaje("\n A continuacion se mostraran los numeros ordenados por Radix Sort: \n");
         printArray(datos);
     }
-
- 
-    
 }
