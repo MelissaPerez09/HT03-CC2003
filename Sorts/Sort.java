@@ -1,7 +1,7 @@
 package Sorts;
 /**
  * Universidad del Valle de Guatemala
- * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @author Jimena Hernandez/21199 Mark Albrand/21004 Emily Perez/21385
  * @version 25/02/2022
  * Algoritmos y estructuras de Datos HDT3
  *
@@ -13,7 +13,7 @@ package Sorts;
 public class Sort implements IComparator <Integer>{
 
     /**
-     * Método para comparar dos valores enteros
+     * Metodo para comparar dos valores enteros
       * @param x Primer valor a comparar
      * @param y Segundo valor a comparar
      * @return Regresa 0 si el primer valor es mayor, 1 si es menor, -1 si son iguales
@@ -34,7 +34,7 @@ public class Sort implements IComparator <Integer>{
     }
 
     /**
-     * Método para imprimir un array
+     * Metodo para imprimir un array
      * @param array Array a imprimir
      */
     public void printArray(int[] array){
@@ -45,7 +45,7 @@ public class Sort implements IComparator <Integer>{
     }
 
     /**
-     * Método para imprimir un mensaje en pantalla
+     * Metodo para imprimir un mensaje en pantalla
      * @param mensaje Mensaje a imprimir
      */
     public void mensaje(String mensaje){

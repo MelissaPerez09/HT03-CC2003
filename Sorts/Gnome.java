@@ -1,7 +1,7 @@
 package Sorts;
 /**
  * Universidad del Valle de Guatemala
- * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @author Jimena Hernandez/21199 Mark Albrand/21004 Emily Perez/21385
  * @version 25/02/2022
  * Algoritmos y estructuras de Datos HDT3
  *
@@ -12,9 +12,9 @@ package Sorts;
 public class Gnome extends Sort {
 
     /**
-     * Método principal para ordenar un array por medio de Gnome Sort
+     * Metodo principal para ordenar un array por medio de Gnome Sort
      * @param datos Array de los datos a ordenar
-     * @param size Tamaño del array a ordenar
+     * @param size Tamano del array a ordenar
      */
     public void gnomeSort(int datos[], int size)
     {
