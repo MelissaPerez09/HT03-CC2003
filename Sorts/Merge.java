@@ -11,7 +11,7 @@ package Sorts;
 
 public class Merge extends Sort{
 
-  public void sort (int datos[], int izquierda, int medio, int derecha){
+  public void merge (int datos[], int izquierda, int medio, int derecha){
     int num1 = medio - izquierda + 1;
     int num2 = derecha - medio;
 
@@ -38,6 +38,29 @@ public class Merge extends Sort{
       j++;
       }
       k++;
+    }
+
+    while (i < num1){
+      datos[k] = izq[i];
+      i++;
+      k++;
+    }
+
+    while (j < num2){
+      datos[k] = der[j];
+      j++;
+      k++;
+    }
+  }
+
+  public static void sort (int datos[], int izquierda, int derecha){
+    if (izquierda < derecha){
+      int medio = izquierda + (derecha - 1) / 2;
+
+      sort(datos, izquierda, medio);
+      sort(datos, medio + 1, derecha);
+
+      merge(datos, izquierda, medio, derecha);
     }
   }
 }
