@@ -42,7 +42,7 @@ public class Merge extends Sort{
     //realiza el merge en el subarreglo dentro del arreglo
     int k = izquierda;
     while (i < num1 && j < num2){
-      if (izq[i] <= der[j]);{
+      if (Compare (izq[i] <= der[j]) ==0);{
         datos[k] = izq[i];
         i++;
       }{
@@ -65,6 +65,10 @@ public class Merge extends Sort{
       j++;
       k++;
     }
+  }
+
+  private int Compare(boolean b) {
+    return 0;
   }
 
   /**
