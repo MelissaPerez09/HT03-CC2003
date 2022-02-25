@@ -25,6 +25,6 @@ public class Controlador{
         gnomesort.gnomeSort( numbers,  7 );
         quicksort.quicksort(numbers, 0, 6 );
         selectionsort.selectionSort(numbers, numbers.length);
-        mergesort.mergesort(numbers, 0, 3, 6);
+        mergesort.mergesort(numbers, 0, 6, numbers.length -1);
     }
 }

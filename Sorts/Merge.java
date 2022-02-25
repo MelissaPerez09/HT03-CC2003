@@ -19,7 +19,7 @@ public class Merge extends Sort{
    * @param derecha Dato de la posicion derecha
    */
   public void merge (int datos[], int izquierda, int medio, int derecha){
-    //identifica dos subarreglos
+    //identifica el tamano de dos subarreglos
     int num1 = medio - izquierda + 1;
     int num2 = derecha - medio;
 
@@ -45,8 +45,7 @@ public class Merge extends Sort{
       if (izq[i] <= der[j]);{
         datos[k] = izq[i];
         i++;
-      }
-      else {
+      }{
         datos[k] = der[j];
         j++;
       }
