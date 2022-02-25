@@ -1,5 +1,6 @@
 import Sorts.Gnome;
 import Sorts.Quick;
+import Sorts.Radix;
 import Sorts.Selection;
 
 /**
@@ -24,10 +25,12 @@ public class Controlador{
         Gnome gnomesort = new Gnome();
         Quick quicksort= new Quick();
         Selection selectionsort = new Selection();
+        Radix radixsort= new Radix();
 
         gnomesort.gnomeSort( numbers,  6 );
         quicksort.quicksort(numbers, 0, 5 );
         selectionsort.selectionSort(numbers, numbers.length);
+        radixsort.radixsort(numbers, numbers.length);
 
         int[] n = Archivos.generarNumeros(5);
 
