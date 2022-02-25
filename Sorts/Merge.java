@@ -31,7 +31,7 @@ public class Merge extends Sort{
     for (int i = 0; i < num1; ++i){
       izq[i] = datos[izquierda + i];
     }
-    for (int j = 0; j < num2; j++){
+    for (int j = 0; j < num2; ++j){
       der[j] = datos [medio + 1 +j];
     }
 
@@ -45,9 +45,10 @@ public class Merge extends Sort{
       if (izq[i] <= der[j]);{
         datos[k] = izq[i];
         i++;
-      }{
-      datos[k] = der[j];
-      j++;
+      }
+      else {
+        datos[k] = der[j];
+        j++;
       }
       k++;
     }
@@ -96,7 +97,7 @@ public class Merge extends Sort{
    */
   public void mergesort(int datos[], int izquierda, int medio, int derecha){
     merge(datos, izquierda, medio, derecha);
-    mensaje("\n A continuation se mostraran los numeros ordenados por MergeSort:");
+    mensaje("\n A continuacion se mostraran los numeros ordenados por MergeSort:");
     printArray(datos);
   }
 }
