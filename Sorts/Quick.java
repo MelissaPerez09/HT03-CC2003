@@ -1,7 +1,7 @@
 package Sorts;
 /**
  * Universidad del Valle de Guatemala
- * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @author Jimena Hernandez/21199 Mark Albrand/21004 Emily Perez/21385
  * @version 25/02/2022
  * Algoritmos y estructuras de Datos HDT3
  *
@@ -13,10 +13,10 @@ public class Quick extends Sort{
 
     /**
      * Se encarga de dividir en particiones un arreglo, una vez el elemento de la izquierda supere al de la derecha
-     * @param datos Array o partición a ordenar
-     * @param izquierda Dato en la posición izquierda
-     * @param derecha Dato en la posición derecha
-     * @return Número en donde se dará la siguiente partición
+     * @param datos Array o particion a ordenar
+     * @param izquierda Dato en la posicion izquierda
+     * @param derecha Dato en la posicion derecha
+     * @return Numero en donde se dara la siguiente particion
      */
     public int particion(int datos[], int izquierda, int derecha) {
         int pivote = datos[izquierda];
@@ -43,10 +43,10 @@ public class Quick extends Sort{
 
 
     /**
-     * Método principal para el ordenamiento mediante recursividad
-     * @param datos Array o partición a ordenar
-     * @param izquierda Dato en la posición izquierda
-     * @param derecha Dato en la posición derecha
+     * Metodo principal para el ordenamiento mediante recursividad
+     * @param datos Array o particion a ordenar
+     * @param izquierda Dato en la posicion izquierda
+     * @param derecha Dato en la posicion derecha
      */
     public void sort(int datos[], int izquierda, int derecha) {
         if (Compare(izquierda, derecha) == 1) {
@@ -58,10 +58,10 @@ public class Quick extends Sort{
     }
 
     /**
-     * Método para imprimir un mensaje después de la finalización del ordenamiento.
-     * @param datos Array o partición a ordenar
-     * @param izquierda Dato en la posición izquierda
-     * @param derecha Dato en la posición derecha
+     * Metodo para imprimir un mensaje despues de la finalizacion del ordenamiento.
+     * @param datos Array o particion a ordenar
+     * @param izquierda Dato en la posicion izquierda
+     * @param derecha Dato en la posicion derecha
      */
     public void quicksort(int datos[], int izquierda, int derecha){
         sort(datos, izquierda, derecha);
