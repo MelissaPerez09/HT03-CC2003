@@ -19,6 +19,7 @@ public class Merge extends Sort{
    * @param derecha Dato de la posicion derecha
    */
   public void merge (int datosOriginales[], int izquierda, int medio, int derecha){
+    // Copia de los datos originales, para no alterar el array original
     int[] datos = new int[datosOriginales.length];
     System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
 

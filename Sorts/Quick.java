@@ -64,6 +64,7 @@ public class Quick extends Sort{
      * @param derecha Dato en la posicion derecha
      */
     public void quicksort(int datosOriginales[], int izquierda, int derecha){
+        // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
 

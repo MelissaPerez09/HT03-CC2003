@@ -17,6 +17,7 @@ public class Selection extends Sort{
      * @param size Tamano del array a ordenar
      */
     public void selectionSort(int datosOriginales[], int size){
+        // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
 
