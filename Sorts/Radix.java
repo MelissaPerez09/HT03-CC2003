@@ -60,10 +60,13 @@ public class Radix extends Sort{
 
     /**
      * funcion p, ordena los datos de tamano n con Radix Sort
-     * @param datos
+     * @param datosOriginales
      * @param n
      */
-    public void radixsort(int datos[], int n){
+    public void radixsort(int datosOriginales[], int n){
+        int[] datos = new int[datosOriginales.length];
+        System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+
         // Encontrando el max
         int m = getMax(datos, n);
  

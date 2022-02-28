@@ -13,25 +13,29 @@ public class Archivos {
         archivo.createNewFile();
     }
 
-    public static int[] generarNumeros(int cantidad){
+    public int[] generarNumeros(){
+        int cantidad = 0;
         int[] nums = leer();
         Random rand = new Random();
 
         if(nums != null){
             return nums;
         }else {
+            Scanner s = new Scanner(System.in);
+            System.out.println("Ingrese la cantidad de números a generar\n");
+            cantidad = s.nextInt();
             nums = new int[cantidad];
         }
 
         for (int i = 0; i < cantidad; i++) {
-            nums[i] = rand.nextInt(9999);
+            nums[i] = rand.nextInt(1999);
         }
 
         escribir(nums);
         return nums;
     }
 
-    private static void escribir(int[] arr){
+    private void escribir(int[] arr){
         String linea = "";
         boolean resultado = false;
 
@@ -50,7 +54,7 @@ public class Archivos {
 
     }
 
-    private static int[] leer(){
+    private int[] leer(){
         int[] nums = null;
         String[] digits;
         try{

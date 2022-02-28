@@ -13,12 +13,15 @@ public class Merge extends Sort{
 
   /**
    * Se encarga de dividir el arreglo identificando los elementos de la izquierda, derecha y medio
-   * @param datos Array para ordenar
+   * @param datosOriginales Array para ordenar
    * @param izquierda Dato de la posicion izquierda
    * @param medio Dato de la posicion medio
    * @param derecha Dato de la posicion derecha
    */
-  public void merge (int datos[], int izquierda, int medio, int derecha){
+  public void merge (int datosOriginales[], int izquierda, int medio, int derecha){
+    int[] datos = new int[datosOriginales.length];
+    System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+
     //identifica el tamano de dos subarreglos
     int num1 = medio - izquierda + 1;
     int num2 = derecha - medio;

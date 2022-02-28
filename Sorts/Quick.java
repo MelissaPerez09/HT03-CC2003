@@ -59,11 +59,14 @@ public class Quick extends Sort{
 
     /**
      * Metodo para imprimir un mensaje despues de la finalizacion del ordenamiento.
-     * @param datos Array o particion a ordenar
+     * @param datosOriginales Array o particion a ordenar
      * @param izquierda Dato en la posicion izquierda
      * @param derecha Dato en la posicion derecha
      */
-    public void quicksort(int datos[], int izquierda, int derecha){
+    public void quicksort(int datosOriginales[], int izquierda, int derecha){
+        int[] datos = new int[datosOriginales.length];
+        System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+
         sort(datos, izquierda, derecha);
         mensaje("\n A continuation se mostraran los numeros ordenados por Quick Sort:");
         printArray(datos);

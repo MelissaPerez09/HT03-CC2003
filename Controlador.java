@@ -15,30 +15,27 @@ import Sorts.Selection;
  */
 
 public class Controlador{
-    private static Archivos archivos;
+    private static Archivos archivo;
+
     public static void main(String[] args) {
-        int[] numbers = {10,24,30,87,2,3};
         try{
-             archivos = new Archivos("test.txt");
+             archivo = new Archivos("test.txt");
         }catch (Exception e){
 
         }
+        int[] numbers = archivo.generarNumeros();
+
         Gnome gnomesort = new Gnome();
         Merge mergesort = new Merge();
         Quick quicksort= new Quick();
         Selection selectionsort = new Selection();
         Radix radixsort= new Radix();
 
-        gnomesort.gnomeSort( numbers,  6 );
-        mergesort.mergesort(numbers, 0, 6, numbers.length -1);
-        quicksort.quicksort(numbers, 0, 5 );
+        gnomesort.gnomeSort(numbers,  numbers.length);
+        mergesort.mergesort(numbers, 0, (numbers.length/2), numbers.length -1);
+        quicksort.quicksort(numbers, 0, numbers.length-1);
         selectionsort.selectionSort(numbers, numbers.length);
         radixsort.radixsort(numbers, numbers.length);
 
-        int[] n = Archivos.generarNumeros(5);
-
-        for (int i = 0; i < n.length; i++) {
-            System.out.println(n[i]);
-        }
     }
 }

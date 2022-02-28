@@ -13,10 +13,13 @@ public class Selection extends Sort{
 
     /**
      * Metodo principal para ordenar un array por medio de Selection Sort
-     * @param datos Array de los datos a ordenar
+     * @param datosOriginales Array de los datos a ordenar
      * @param size Tamano del array a ordenar
      */
-    public void selectionSort(int datos[], int size){
+    public void selectionSort(int datosOriginales[], int size){
+        int[] datos = new int[datosOriginales.length];
+        System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+
         int sinOrdenar = size;
         int max;
 
