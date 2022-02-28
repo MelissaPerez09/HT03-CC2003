@@ -6,7 +6,7 @@ import Sorts.Selection;
 
 /**
  * Universidad del Valle de Guatemala
- * @author Jimena Hernández/21199 Mark Albrand/21004 Emily Pérez/21385
+ * @author Jimena Hernandez/21199 Mark Albrand/21004 Emily Perez/21385
  * @version 25/02/2022
  * Algoritmos y estructuras de Datos HDT3
  * 

@@ -22,7 +22,7 @@ public class Archivos {
             return nums;
         }else {
             Scanner s = new Scanner(System.in);
-            System.out.println("Ingrese la cantidad de números a generar\n");
+            System.out.println("Ingrese la cantidad de numeros a generar\n");
             cantidad = s.nextInt();
             nums = new int[cantidad];
         }
