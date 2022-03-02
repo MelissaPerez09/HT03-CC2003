@@ -19,7 +19,7 @@ public class Merge extends Sort{
    * @param medio Dato de la posicion medio
    * @param derecha Dato de la posicion derecha
    */
-	public void merge (int datos[], int izquierda, int medio, int derecha){
+	void merge (int datos[], int izquierda, int medio, int derecha){
 
 		//identifica el tamano de dos subarreglos
 		int num1 = medio - izquierda + 1;
@@ -38,8 +38,7 @@ public class Merge extends Sort{
 		}
 
 		//index para segundos subarreglos
-		int i = 0;
-		int j = 0;
+		int i = 0, j = 0;
 
 		//realiza el merge en el subarreglo dentro del arreglo
 		int k = izquierda;
