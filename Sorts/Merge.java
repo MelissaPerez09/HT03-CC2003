@@ -5,93 +5,96 @@ package Sorts;
  * @version 25/02/2022
  * Algoritmos y estructuras de Datos HDT3
  *
- * Merge.java
- * Clase Merge que ordena un array de enteros con el algoritmo Merge Sort
+ * Radix.java
  */
 
+import java.util.*; 
+
 public class Merge extends Sort{
-
-  void merge(int arr[], int l, int m, int r)
-  {
-    // Find sizes of two subarrays to be merged
-    int n1 = m - l + 1;
-    int n2 = r - m;
-
-    /* Create temp arrays */
-    int L[] = new int[n1];
-    int R[] = new int[n2];
-
-    /*Copy data to temp arrays*/
-    for (int i = 0; i < n1; ++i)
-      L[i] = arr[l + i];
-    for (int j = 0; j < n2; ++j)
-      R[j] = arr[m + 1 + j];
-
-    /* Merge the temp arrays */
-
-    // Initial indexes of first and second subarrays
-    int i = 0, j = 0;
-
-    // Initial index of merged subarray array
-    int k = l;
-    while (i < n1 && j < n2) {
-      if (L[i] <= R[j]) {
-        arr[k] = L[i];
-        i++;
-      }
-      else {
-        arr[k] = R[j];
-        j++;
-      }
-      k++;
-    }
-
-    /* Copy remaining elements of L[] if any */
-    while (i < n1) {
-      arr[k] = L[i];
-      i++;
-      k++;
-    }
-
-    /* Copy remaining elements of R[] if any */
-    while (j < n2) {
-      arr[k] = R[j];
-      j++;
-      k++;
-    }
-  }
-
-  // Main function that sorts arr[l..r] using
-  // merge()
-  void sort(int arr[], int l, int r)
-  {
-    if (l < r) {
-      // Find the middle point
-      int m =l+ (r-l)/2;
-
-      // Sort first and second halves
-      sort(arr, l, m);
-      sort(arr, m + 1, r);
-
-      // Merge the sorted halves
-      merge(arr, l, m, r);
-    }
-  }
-
-  /**
-   * Metodo para imprimir un mensaje despues del ordenamiento
-   * @param datos Array para ordenar
+	
+	/**
+   * Se encarga de dividir el arreglo identificando los elementos de la izquierda, derecha y medio
+   * @param datosOriginales Array para ordenar
    * @param izquierda Dato de la posicion izquierda
    * @param medio Dato de la posicion medio
    * @param derecha Dato de la posicion derecha
    */
-  public void mergesort(int datosOriginales[], int izquierda, int derecha){
+	void merge(int datos[], int izquierda, int medio, int derecha){
+		//identifica el tamano de dos subarreglos
+		int num1 = medio - izquierda + 1;
+		int num2 = derecha - medio;
+	  
+		//crea arreglos temporales para el ordenamiento
+		int L[] = new int[num1];
+		int R[] = new int[num2];
+	  
+		//copia los datos en los arreglos temporales
+		for (int i = 0; i < num1; ++i)
+			L[i] = datos[izquierda + i];
+		for (int j = 0; j < num2; ++j)
+			R[j] = datos[medio + 1 + j];
+	  
+		//index para segundos subarreglos
+		int i = 0, j = 0;
+	  
+		//realiza el merge en el subarreglo dentro del arreglo
+		int k = izquierda;
+		while (i < num1 && j < num2) {
+			if (L[i] <= R[j]) {
+				datos[k] = L[i];
+					i++;
+			}
+			else {
+				datos[k] = R[j];
+				j++;
+			}
+			k++;
+		}
+	  
+		//copia el arreglo 1 izquierdo
+		while (i < num1) {
+			datos[k] = L[i];
+			i++;
+			k++;
+		}
+	  
+		//copia el arreglo 2 derecho
+		while (j < num2) {
+			datos[k] = R[j];
+			j++;
+			k++;
+		}
+	}
+	  
 
-    int[] datos = new int[datosOriginales.length];
-    System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+	/**
+   * Metodo que ordena los enteros por medio de recursividad
+   * @param datos Array para ordenar
+   * @param izquierda Dato de la posicion izquierda
+   * @param derecha Dato de la posicion derecha
+   */
+	void sort(int arr[], int izquierda, int derecha){
+		if (izquierda < derecha) {
+			//encuentra la parte media del arreglo
+			int medio =izquierda+ (derecha-izquierda)/2;
+			
+			//ejecuta el sort para las partes medias de la derecha e izquierda
+			sort(arr, izquierda, medio);
+			sort(arr, medio + 1, derecha);
+	  
+			//realiza el merge completo
+			merge(arr, izquierda, medio, derecha);
+		}
+	}
 
-    sort(datos, izquierda, derecha);
-    mensaje("\n A continuacion se mostraran los numeros ordenados por MergeSort:");
-    printArray(datos);
-  }
+	public void mergesort(int datosOriginales[], int izquierda, int derecha){
+		// Copia de los datos originales, para no alterar el array original
+		int[] datos = new int[datosOriginales.length];
+		System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+		sort(datos, izquierda, derecha);
+		mensaje("\n A continuacion se mostraran los numeros ordenados por MergeSort:");
+		printArray(datos);
+
+	}
+	  
 }
