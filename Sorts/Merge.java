@@ -87,14 +87,13 @@ public class Merge extends Sort{
 		}
 	}
 
-	public void mergesort(int datosOriginales[], int izquierda, int derecha){
+	public int[] mergesort(int datosOriginales[], int izquierda, int derecha) {
 		// Copia de los datos originales, para no alterar el array original
 		int[] datos = new int[datosOriginales.length];
 		System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
 		sort(datos, izquierda, derecha);
 		mensaje("\n A continuacion se mostraran los numeros ordenados por MergeSort:");
 		printArray(datos);
-
+		return datos;
 	}
-	  
 }

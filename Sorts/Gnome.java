@@ -16,7 +16,7 @@ public class Gnome extends Sort {
      * @param datosOriginales Array de los datos a ordenar
      * @param size Tamano del array a ordenar
      */
-    public void gnomeSort(int datosOriginales[], int size){
+    public int[] gnomeSort(int datosOriginales[], int size){
         // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
@@ -38,7 +38,7 @@ public class Gnome extends Sort {
         }
         mensaje("\n A continuacion se mostraran los numeros ordenados por Gnome Sort: \n");
         printArray(datos);
-        return;
+        return datos;
 
     }
     
