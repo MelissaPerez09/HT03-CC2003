@@ -14,7 +14,7 @@ public class Merge extends Sort{
 	
 	/**
    * Se encarga de dividir el arreglo identificando los elementos de la izquierda, derecha y medio
-   * @param datosOriginales Array para ordenar
+   * @param datos Array para ordenar
    * @param izquierda Dato de la posicion izquierda
    * @param medio Dato de la posicion medio
    * @param derecha Dato de la posicion derecha
@@ -73,20 +73,27 @@ public class Merge extends Sort{
    * @param izquierda Dato de la posicion izquierda
    * @param derecha Dato de la posicion derecha
    */
-	void sort(int arr[], int izquierda, int derecha){
+	void sort(int datos[], int izquierda, int derecha){
 		if (izquierda < derecha) {
 			//encuentra la parte media del arreglo
 			int medio =izquierda+ (derecha-izquierda)/2;
 			
 			//ejecuta el sort para las partes medias de la derecha e izquierda
-			sort(arr, izquierda, medio);
-			sort(arr, medio + 1, derecha);
+			sort(datos, izquierda, medio);
+			sort(datos, medio + 1, derecha);
 	  
 			//realiza el merge completo
-			merge(arr, izquierda, medio, derecha);
+			merge(datos, izquierda, medio, derecha);
 		}
 	}
 
+	/**
+	 * Método principal para el metodo Merge Sort, e imprime un mensaje
+	 * @param datosOriginales Array para ordenar
+	 * @param izquierda Dato de la posicion izquierda
+	 * @param derecha Dato de la posicion derecha
+	 * @return Datos ordenados
+	 */
 	public int[] mergesort(int datosOriginales[], int izquierda, int derecha) {
 		// Copia de los datos originales, para no alterar el array original
 		int[] datos = new int[datosOriginales.length];

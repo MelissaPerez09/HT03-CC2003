@@ -15,6 +15,7 @@ public class Selection extends Sort{
      * Metodo principal para ordenar un array por medio de Selection Sort
      * @param datosOriginales Array de los datos a ordenar
      * @param size Tamano del array a ordenar
+     * @return Datos ordenados
      */
     public int[] selectionSort(int datosOriginales[], int size){
         // Copia de los datos originales, para no alterar el array original

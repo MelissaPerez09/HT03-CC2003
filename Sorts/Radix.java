@@ -62,6 +62,7 @@ public class Radix extends Sort{
      * funcion p, ordena los datos de tamano n con Radix Sort
      * @param datosOriginales
      * @param n
+     * @return Datos ordenados
      */
     public int[] radixsort(int datosOriginales[], int n){
         // Copia de los datos originales, para no alterar el array original

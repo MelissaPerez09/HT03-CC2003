@@ -62,6 +62,7 @@ public class Quick extends Sort{
      * @param datosOriginales Array o particion a ordenar
      * @param izquierda Dato en la posicion izquierda
      * @param derecha Dato en la posicion derecha
+     * @return Datos ordenados
      */
     public int[] quicksort(int datosOriginales[], int izquierda, int derecha){
         // Copia de los datos originales, para no alterar el array original
