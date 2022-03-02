@@ -63,7 +63,7 @@ public class Radix extends Sort{
      * @param datosOriginales
      * @param n
      */
-    public void radixsort(int datosOriginales[], int n){
+    public int[] radixsort(int datosOriginales[], int n){
         // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
@@ -78,5 +78,6 @@ public class Radix extends Sort{
         
         mensaje("\n A continuacion se mostraran los numeros ordenados por Radix Sort: \n");
         printArray(datos);
+        return datos;
     }
 }

@@ -63,7 +63,7 @@ public class Quick extends Sort{
      * @param izquierda Dato en la posicion izquierda
      * @param derecha Dato en la posicion derecha
      */
-    public void quicksort(int datosOriginales[], int izquierda, int derecha){
+    public int[] quicksort(int datosOriginales[], int izquierda, int derecha){
         // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
@@ -71,6 +71,7 @@ public class Quick extends Sort{
         sort(datos, izquierda, derecha);
         mensaje("\n A continuation se mostraran los numeros ordenados por Quick Sort:");
         printArray(datos);
+        return datos;
     }
     
 }

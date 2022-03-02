@@ -16,7 +16,7 @@ public class Selection extends Sort{
      * @param datosOriginales Array de los datos a ordenar
      * @param size Tamano del array a ordenar
      */
-    public void selectionSort(int datosOriginales[], int size){
+    public int[] selectionSort(int datosOriginales[], int size){
         // Copia de los datos originales, para no alterar el array original
         int[] datos = new int[datosOriginales.length];
         System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
@@ -40,5 +40,6 @@ public class Selection extends Sort{
 
         mensaje("\n A continuacion se mostraran los numeros ordenados por Selection Sort: \n");
         printArray(datos);
+        return datos;
     }
 }
