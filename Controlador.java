@@ -32,7 +32,7 @@ public class Controlador{
         Radix radixsort= new Radix();
 
         gnomesort.gnomeSort(numbers,  numbers.length);
-        mergesort.mergesort(numbers, 0, numbers.length -1);
+        mergesort.mergesort(numbers, 0, (numbers.length / 2), numbers.length -1);
         quicksort.quicksort(numbers, 0, numbers.length-1);
         selectionsort.selectionSort(numbers, numbers.length);
         radixsort.radixsort(numbers, numbers.length);
