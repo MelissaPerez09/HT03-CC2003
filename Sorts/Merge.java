@@ -19,10 +19,7 @@ public class Merge extends Sort{
    * @param medio Dato de la posicion medio
    * @param derecha Dato de la posicion derecha
    */
-	public void merge (int datosOriginales[], int izquierda, int medio, int derecha){
-		// Copia de los datos originales, para no alterar el array original
-		int[] datos = new int [datosOriginales.length];
-		System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+	public void merge (int datos[], int izquierda, int medio, int derecha){
 
 		//identifica el tamano de dos subarreglos
 		int num1 = medio - izquierda + 1;
@@ -74,15 +71,6 @@ public class Merge extends Sort{
 	}
 
 	/**
-	 * Metodo para utilizar el compare de la clase sort
-	 * @param b
-	 * @return
-	 */
-	private int Compare (boolean b){
-		return 0;
-	}
-
-	/**
    * Metodo que ordena los enteros por medio de recursividad
    * @param datos Array para ordenar
    * @param izquierda Dato de la posicion izquierda
@@ -102,8 +90,11 @@ public class Merge extends Sort{
 		}
 	}
 
-	public void mergesort (int datos[], int izquierda, int medio, int derecha){
-		merge(datos, izquierda, medio, derecha);
+	public void mergesort (int datosOriginales[], int izquierda, int medio, int derecha){
+    // Copia de los datos originales, para no alterar el array original
+		int[] datos = new int [datosOriginales.length];
+		System.arraycopy(datosOriginales, 0, datos, 0, datosOriginales.length);
+		sort(datos, izquierda, derecha);
 		mensaje("\n A continuacion se mostraran los numeros ordenados por MergeSort:");
 		printArray(datos);
 	}
